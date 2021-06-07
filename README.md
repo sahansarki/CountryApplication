@@ -2,7 +2,7 @@
 
 ## Description
 
-Country application with MVVM architecture. When the user click any country's flag the application shows the information of relevant country.  
+Country application with MVVM architecture. When the user clicks any country's flag the application shows the information of relevant country.  
 
 ![](https://media.giphy.com/media/uZ6P7j3ecdGoupnFo7/giphy.gif)
 ![](https://media.giphy.com/media/i9hAOGq7m2Q6S5oamP/giphy.gif)
