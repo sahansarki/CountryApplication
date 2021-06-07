@@ -20,17 +20,20 @@ class FeedFragment : Fragment() {
     private val countryAdapter = CountryAdapter(arrayListOf())
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        
-        return inflater.inflate(R.layout.fragment_feed, container, false)
+        return inflater.inflate(R.layout.fragment_feed, container,false)
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(FeedViewModel::class.java)
+
         viewModel.refreshData()
 
         countryList.layoutManager = LinearLayoutManager(context)
@@ -41,11 +44,12 @@ class FeedFragment : Fragment() {
             country_Error.visibility = View.GONE
             countryLoading.visibility = View.VISIBLE
 
-            viewModel.refreshData()
+            viewModel.refreshFromAPI()
             swipeRefreshLayout.isRefreshing = false
 
         }
         observeLiveData()
+
 
 
 
