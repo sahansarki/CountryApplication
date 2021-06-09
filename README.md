@@ -15,7 +15,6 @@ Country application with MVVM architecture. When the user clicks any country's f
     - Retrofit
     - Glide
     - LiveData
-    - RxJava
     - Room
     - SharedPreferences
     - DataBinding
